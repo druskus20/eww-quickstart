@@ -51,5 +51,5 @@
     ; Eww defines a set of MAGIC_VARIABLES that can be accesed by name:
     ;:text "${EWW_RAM}"
 
-    :text "Hello ${elko.name} ${elko.title}!"))
+    :text "Hellowar ${elko.name} ${elko.title}!"))
 
