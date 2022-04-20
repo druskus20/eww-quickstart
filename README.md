@@ -48,6 +48,9 @@ the configuration. Feel free to check [the official docs](https://elkowar.github
 vim eww.yuck
 ```
 
+I recommend installing the yuck plugin for vim: [yuck.vim](https://github.com/elkowar/yuck.vim). 
+Alternatively, you can always set the syntax to Clojure or Lisp.
+
 ## Tips
 
 - You can check the eww logs by running `eww logs`
