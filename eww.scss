@@ -1,0 +1,40 @@
+// ------------------------------------------------------------------------------
+// This is the Scss file:
+// Here, we can style the widgets defined in eww.yuck. 
+//
+// This file is loaded by eww on startup. And it is hot reloaded when it
+// changes.
+// Check https://elkowar.github.io for more information.
+// ------------------------------------------------------------------------------
+
+// We could import other Scss files (i.e. _other.scss) here
+// @import "other"
+
+// In Scss we can define variables
+$background: #2a2a2a;
+$foreground: #c0c0c0;
+$accent: #f0a050;
+
+// It's usually desirable to unset the defaults set by GTK and your GTK theme.
+* {
+  all: unset;
+}
+
+// We can style GTK elements
+window {
+  background: $background;
+}
+
+// We can also style our own classes
+.my-window {
+  // Scss supports nesting 
+  .helloworld {
+    font-size: 30px;
+  
+    // and other features like the "parent selector" 
+    &--fancy {
+      font-size: 30px;
+      color: $accent;
+    }
+  }
+}

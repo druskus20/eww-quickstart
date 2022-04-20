@@ -1,0 +1,55 @@
+; ------------------------------------------------------------------------------
+; This is the Yuck file:
+; Here, we can define the windows, variables and widgets that eww will render
+;
+; This file is loaded by eww on startup. And it is hot reloaded when it
+; changes.
+; Check https://elkowar.github.io for more information.
+; ------------------------------------------------------------------------------
+
+; -- Include other yuck files --
+
+;(include "./widgets/my-widget.yuck")
+
+
+; -- Define windows --
+
+(defwindow my-window :monitor 0
+               ;:reserve (struts :distance "50px" :side "top")
+               :geometry (geometry :anchor "top left" 
+                                   :x 0
+                                   :y 0
+                                   ;:width "100%"
+                                   :width "200px" 
+                                   :height "50px")
+  (box :class "my-window"
+       :orientation "horizontal"
+    (helloworld)))
+
+
+; -- Define variables --
+
+(defpoll date :interval "1s" 
+              :initial "empty"
+  "date +%H:%M:%S")
+
+(deflisten name :initial "empty"
+  "./modules/helloworld.sh")
+
+; Variables can contain JSON objects, that can later be accessed using
+; SimpleExpr (Eww's expression language)
+(defvar elko '{"name": "Elk", "title": "of War"}')
+
+
+; -- Define widgets --
+
+(defwidget helloworld []
+  (label 
+    :class "helloworld"
+    ;:class "helloworld--fancy"
+    
+    ; Eww defines a set of MAGIC_VARIABLES that can be accesed by name:
+    ;:text "${EWW_RAM}"
+
+    :text "Hello ${elko.name} ${elko.title}!"))
+
