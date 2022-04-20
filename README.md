@@ -40,7 +40,7 @@ For more options check the official documentation or run `eww -h`.
 cd "$XDG_CONFIG_HOME"/.config/eww 
 ```
 Start by opening `eww.yuck` and `eww.scss`. You will find comments detailing
-the configuration. Feel free to check [the official docs](https://elkowar.github.io) too!
+the configuration. Feel free to check [the official docs](https://elkowar.github.io/eww) too!
 
 > NOTE: Use `:q` to exit Vim :) (you could always use Nano instead, but we both know that
 > you're a cool power user)
@@ -56,6 +56,6 @@ vim eww.yuck
 ## Links 
 
 - Eww: https://github.com/elkowar/eww
-- Official Documentation: https://elkowar.github.io
+- Official Documentation: https://elkowar.github.io/eww
 - Some more examples that I've made over time: [eugh](https://github.com/druskus20/eugh)
 
